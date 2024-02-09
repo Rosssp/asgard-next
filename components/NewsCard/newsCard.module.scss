@@ -1,0 +1,75 @@
+@use "@/styles/mixins";
+
+.wrapper {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    gap: 28px;
+    & .image {
+        width: 271px;
+        height: 202px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 4px;
+        & img {
+            @include mixins.imgCover;
+        }
+    }
+    & .right__side {
+        max-width: 261px;
+        & .title {
+            margin-top: 16px;
+            margin-bottom: 25px;
+        }
+        & .descr {
+            font-weight: 400;
+            font-size: 13px;
+            display: -webkit-box;
+            -webkit-line-clamp: 7;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+    }
+}
+
+@media (max-width: 1210px) {
+    .wrapper {
+        gap: 14px;
+        & .image {
+            width: 50%;
+            height: 100%;
+        }
+        & .right__side {
+            max-width: 40%;
+            & .title {
+                margin-top: 9px;
+                margin-bottom: 15px;
+            }
+            & .descr {
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        & .image {
+            min-width: 93px;
+            max-width: 93px;
+            min-height: 102px;
+            max-height: 102px;
+        }
+        & .right__side {
+            max-width: 100%;
+            & .title {
+                margin-top: 9px;
+                margin-bottom: 15px;
+                font-size: 17px;
+            }
+            & .descr {
+                font-size: 11px;
+                -webkit-line-clamp: 3;
+            }
+        }
+    }
+}

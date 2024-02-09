@@ -1,0 +1,220 @@
+@import "@/assets/fonts/GothamPro/stylesheet.css";
+@import "@/assets/fonts/RobotoCondensed/stylesheet.css";
+
+:root {
+    --gray: #c4c4c4;
+    --primary: #2196f3ff;
+    --orange: #ff8700;
+
+    --lightOrange: #f19f33;
+    --darkOrange: #ed7d33;
+
+    --lightGreen: #0ccf2f;
+    --darkGreen: #0faf2c;
+
+    --tGreen: #0ccf30;
+    --tBlack: black;
+    --tOrange: #ff8800;
+
+    --br: 8px;
+
+    --shadow: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.1));
+}
+html {
+    scroll-behavior: smooth;
+}
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    cursor: pointer;
+    color: inherit;
+    text-decoration-skip-ink: auto;
+    text-decoration: none;
+    transition: 0.18s all ease-in-out;
+}
+a:hover {
+    color: var(--tOrange);
+}
+button {
+    cursor: pointer;
+    color: inherit;
+    text-transform: inherit;
+}
+p {
+    font-size: 14px;
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
+}
+a {
+    font-size: 14px;
+    @media (max-width: 768px) {
+        font-size: 12px;
+    }
+}
+h1,
+h2,
+h3 {
+    line-height: 100%;
+}
+h1 {
+    text-transform: uppercase;
+    font-size: 28px;
+    font-family: "Gotham Pro";
+    font-weight: bold;
+}
+h2 {
+    text-transform: uppercase;
+    font-size: 25px;
+    @media (max-width: 768px) {
+        font-size: 18px;
+    }
+}
+h3 {
+    text-transform: uppercase;
+    font-size: 22px;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-size: 20px;
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+}
+h5 {
+    font-size: 18px;
+}
+
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+input {
+    outline: none;
+    border: none;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+ul {
+    padding: 0;
+    list-style-type: none;
+}
+b {
+    font-weight: 800;
+}
+
+body {
+    height: 100vh;
+    position: relative;
+    scroll-behavior: smooth;
+    background-color: #f9f9f9;
+    color: var(--tBlack);
+    font-size: 0.875rem;
+    font-family: "Roboto Condensed";
+    font-weight: bold;
+}
+#__next {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+main {
+    flex: 1 1 auto;
+    @media (max-width: 1210px) {
+        padding: 0 10px;
+    }
+}
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+    height: auto;
+}
+
+article > * + * {
+    margin-top: 1em;
+}
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+html * {
+    box-sizing: border-box;
+}
+
+input {
+    outline: none;
+}
+
+#root {
+    min-height: 100%;
+}
+::-webkit-scrollbar {
+    width: 0.5em;
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--gray);
+}
+
+.layout__padding {
+    padding: 0 15px;
+    @media (max-width: 768px) {
+        padding: 0 10px;
+    }
+}
+.padding__right {
+    padding-right: 15px !important;
+    @media (max-width: 768px) {
+        padding: 0 10px !important;
+    }
+}
+.padding__left {
+    padding-left: 15px !important;
+    @media (max-width: 768px) {
+        padding: 0 10px !important;
+    }
+}
+.catalog__title {
+    margin: 36px auto 26px;
+    text-align: center;
+    font-size: 35px;
+    @media (max-width: 768px) {
+        font-size: 20px;
+    }
+}

@@ -1,0 +1,41 @@
+.characheristic {
+    margin-top: 28px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    // width: 100%;
+    @media (max-width: 768px) {
+    }
+    gap: 24px;
+    row-gap: 13px;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.center {
+    text-align: center;
+}
+
+.title {
+    & h4 {
+        margin-right: 8px !important;
+    }
+    & > * {
+        display: inline-block;
+        vertical-align: middle;
+        &:nth-child(2) {
+            margin-right: 32px;
+        }
+        &:nth-child(3) {
+            @media (max-width: 460px) {
+                margin-top: 12px;
+            }
+        }
+    }
+    & .information {
+        font-weight: 400;
+    }
+    & span {
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}

@@ -1,0 +1,101 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+    height: max-content;
+    & .contacts {
+        border-radius: var(--br);
+        background-color: white;
+        padding: 32px 14px 26px 14px;
+        max-width: 401px;
+        min-width: 341px;
+        width: 100%;
+        @media (max-width: 768px) {
+            max-width: 4010px;
+            width: 100%;
+        }
+    }
+    & .title {
+        margin-bottom: 23px;
+        display: block;
+        & .descr {
+            font-family: "Gotham Pro";
+        }
+        & .name {
+            text-align: left;
+            margin: 0 !important;
+        }
+    }
+    & .adress {
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        gap: 9px;
+        & p {
+            font-weight: 400;
+            text-transform: inherit;
+            font-size: 14px;
+        }
+        & > * {
+            &:nth-child(1) {
+                width: max-content;
+                display: inline-block;
+                color: var(--tOrange);
+            }
+            &:nth-child(2) {
+                max-width: 60%;
+                display: inline;
+            }
+        }
+    }
+    .developer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-top: 79px;
+        align-items: stretch;
+        // height: 57%;
+        @media (max-width: 768px) {
+            margin-top: 68px;
+        }
+        & .developerCard {
+            margin-bottom: 23px;
+        }
+        .bottom {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        & .cash {
+            & svg {
+                fill: #00b300;
+            }
+        }
+        & .construction {
+            & svg {
+                fill: var(--tOrange);
+            }
+        }
+        & .cash,
+        .construction {
+            & > p {
+                font-weight: 400;
+            }
+            align-items: center;
+            display: grid;
+            grid-template-columns: 30px 1fr;
+            gap: 13px;
+        }
+    }
+    & .gallery {
+        max-width: 786px;
+        min-width: 341px;
+        width: 100%;
+        height: 501px;
+    }
+    @media (max-width: 768px) {
+        flex-direction: column;
+    }
+}

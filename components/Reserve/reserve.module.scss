@@ -1,0 +1,60 @@
+@use "@/styles/mixins";
+
+.wrapper {
+    max-width: 571px;
+    @media (max-width: 768px) {
+        max-width: 100%;
+    }
+    & .reserve {
+        max-height: 344px;
+        background-color: white;
+        padding: 43px 70px 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media (max-width: 768px) {
+            padding: 25px 20px 20px;
+        }
+    }
+    & h2 {
+        color: var(--tOrange);
+        text-align: center;
+    }
+    & .input__container {
+        margin-top: 38px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        & > p {
+            margin-right: 26px;
+            text-transform: uppercase;
+            font-size: 16px;
+            font-weight: 400;
+        }
+    }
+    & .description {
+        margin-top: 16px;
+        margin-bottom: 19px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    & .fullPayment {
+        margin-top: 14px;
+        padding: 43px 70px 35px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include mixins.orange-gradient-x;
+        & > h2 {
+            color: white;
+        }
+        & > p {
+            margin-top: 11px;
+        }
+        @media (max-width: 768px) {
+            padding: 25px 20px 32px;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+@use "@/styles/mixins";
+
+.wrapper {
+    @include mixins.orange-gradient-x;
+    width: 100%;
+    border-radius: var(--br);
+    padding: 0 15px 16px 15px;
+    & h2 {
+        text-align: center;
+        padding: 35px 0;
+    }
+    & .body {
+        // display: grid;
+        // grid-template-columns: repeat(auto-fill, 271px);
+        justify-content: center;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 28px;
+    }
+}

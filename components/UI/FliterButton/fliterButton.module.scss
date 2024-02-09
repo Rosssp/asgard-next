@@ -1,0 +1,86 @@
+.wrapper {
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: var(--br);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    background-color: white;
+    padding: 12px;
+    width: max-content;
+    transition: 0.2s all ease-in-out;
+    @media (max-width: 768px) {
+        border-radius: 4px;
+    }
+    & svg {
+        line-height: 24px;
+        @media (max-width: 640px) {
+            width: 17px !important;
+            & image {
+                width: 17px !important;
+                height: 100%;
+            }
+        }
+    }
+}
+
+.svg {
+    & svg {
+        width: 22px;
+        height: auto;
+    }
+}
+.auto {
+    & svg {
+        width: 16px;
+        height: auto;
+        margin-left: 28px;
+        opacity: 0.5;
+    }
+    @media (max-width: 768px) {
+        padding: 8px;
+    }
+}
+.default {
+    width: 147px;
+    @media (max-width: 768px) {
+        width: 118px;
+        & p {
+            font-size: 11px;
+        }
+        & svg {
+            & image {
+                @media (max-width: 768px) {
+                    width: 12px !important;
+                }
+            }
+        }
+    }
+}
+.default_orange {
+    width: 170px;
+    font-weight: 400;
+    color: white;
+    background-color: var(--orange);
+    text-transform: inherit;
+    & svg {
+        & image {
+            width: 16px !important;
+            @media (max-width: 768px) {
+                width: 13px !important;
+            }
+        }
+    }
+}
+.xl {
+}
+.lg {
+}
+
+.orange {
+    color: white;
+    background-color: var(--orange);
+}
+// .xl

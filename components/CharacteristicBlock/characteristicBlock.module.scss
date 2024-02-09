@@ -1,0 +1,37 @@
+.wrapper {
+    background-color: white;
+    border-radius: var(--br);
+    max-width: 372px;
+    min-width: 341px;
+    width: 100%;
+    @media (max-width: 1120px) {
+        max-width: 100%;
+    }
+
+    flex: 1;
+    padding: 29px 25px;
+    @media (max-width: 768px) {
+        padding: 22px;
+        min-width: 300px;
+    }
+    & > * {
+        text-transform: uppercase;
+    }
+
+    & .title {
+        color: var(--tOrange);
+        font-size: 17px !important;
+        margin-bottom: 11px;
+
+        @media (max-width: 768px) {
+            font-size: 16px !important;
+        }
+    }
+    & .subTitle {
+        font-size: 21px !important;
+        opacity: 0.6;
+        @media (max-width: 768px) {
+            font-size: 19px !important;
+        }
+    }
+}

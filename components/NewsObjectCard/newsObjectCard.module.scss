@@ -1,0 +1,95 @@
+@use "@/styles/mixins";
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 30px 17px 30px 30px;
+    background-color: white;
+    border-radius: var(--br);
+    @include mixins.hover;
+    margin-bottom: 9px;
+    &:hover {
+        & .left {
+            & h2 {
+                color: var(--tOrange);
+            }
+        }
+    }
+
+    & .left {
+        & h2 {
+            transition: 0.2s all ease-in-out;
+            margin-top: 15px;
+            margin-bottom: 24px;
+        }
+        & .descr {
+            color: black !important;
+        }
+        & p {
+            font-weight: 400;
+            font-size: 15px;
+        }
+    }
+    & .right {
+        height: 127px;
+        position: relative;
+        & > * {
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: var(--br);
+            &:not(:last-child) {
+                margin-right: 17px;
+            }
+        }
+        & img {
+            min-width: 170px;
+            max-width: 170px;
+            @include mixins.imgCover;
+        }
+        & .other__images {
+            height: 100%;
+            width: 54px;
+            background-color: #e0dfdf;
+            line-height: 127px;
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 922px) {
+    .wrapper {
+        flex-wrap: wrap;
+        & .right {
+            margin-top: 22px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 11px;
+        flex-direction: column;
+        & .left {
+            & h2 {
+                margin-top: 10px;
+                margin-bottom: 8px;
+            }
+            & p {
+                font-size: 12px;
+            }
+        }
+        & .right {
+            margin-top: 22px;
+            height: 75px;
+            & img {
+                min-width: 101px;
+                max-width: 101px;
+                @include mixins.imgCover;
+            }
+            & .other__images {
+                line-height: 75px;
+            }
+        }
+    }
+}

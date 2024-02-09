@@ -1,0 +1,38 @@
+@use "@/styles/mixins";
+
+.wrapper {
+    text-align: center;
+    height: 36px;
+    color: var(--tOrange);
+    & svg {
+        vertical-align: middle;
+    }
+    & > * > * {
+        cursor: pointer;
+        display: inline-block;
+        border-radius: 4px;
+        background-color: white;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        @include mixins.hover;
+        &:not(:last-child) {
+            margin-right: 4px;
+        }
+    }
+    & .arrowRight {
+        margin-left: 12px;
+    }
+    & .arrowLeft {
+        margin-right: 12px;
+    }
+    & .doubleArrowRight,
+    .arrowRight {
+        transform: scale(-1, -1);
+    }
+}
+
+.active {
+    background-color: var(--lightOrange);
+    color: white;
+}

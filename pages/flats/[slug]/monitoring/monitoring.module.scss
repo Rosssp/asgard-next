@@ -1,0 +1,19 @@
+.wrapper {
+    & .filter__buttons {
+        margin-bottom: 11px;
+        & > * {
+            display: inline-block;
+            margin-right: 9px;
+        }
+    }
+    & > p {
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 30px;
+    }
+}
+
+.content {
+    max-width: 771px;
+    height: 500px;
+}

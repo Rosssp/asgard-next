@@ -1,0 +1,15 @@
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 27px;
+    row-gap: 30px;
+    @media (max-width: 1210px) {
+        width: max-content;
+        overflow-x: scroll;
+    }
+    @media (max-width: 940px) {
+        gap: 12px;
+        row-gap: 12px;
+        justify-content: center;
+    }
+}

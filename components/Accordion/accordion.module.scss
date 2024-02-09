@@ -1,0 +1,111 @@
+@use "@/styles/mixins";
+
+.wrapper {
+    cursor: pointer;
+    background-color: white;
+    border-radius: var(--br);
+    width: 100%;
+    padding: 30px 0;
+    overflow: hidden;
+    @include mixins.hover;
+    margin-bottom: 9px;
+    position: relative;
+    & .title {
+        padding: 0 0px 0 27px;
+        & > * {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        & svg {
+            fill: var(--tOrange);
+            width: 38px;
+            height: auto;
+            margin-right: 19px;
+        }
+        & .angle {
+            position: absolute;
+            right: 30px;
+            padding-top: 6px;
+            width: 19px;
+            height: 31px;
+            & svg {
+                transition: all 0.2s ease-in-out;
+                width: 100%;
+                height: 100%;
+                rotate: -90deg;
+                height: 100%;
+                fill: gray;
+            }
+        }
+        & .rotate {
+            & svg {
+                transition: all 0.2s ease-in-out;
+                rotate: -180deg !important;
+                fill: var(--tOrange);
+            }
+        }
+    }
+
+    & .body {
+        padding: 0 111px 0 83px;
+        max-height: 0px;
+        transition: all 0.2s ease-in-out;
+        overflow: hidden;
+        & p {
+            margin-top: 23px;
+            font-weight: 400;
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+        & a {
+            text-transform: uppercase;
+            color: var(--tOrange);
+            text-decoration: underline;
+            font-size: 15px;
+        }
+    }
+}
+.active {
+    max-height: 1000px !important;
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 20px 0 54px 0;
+        & .title {
+            padding: 0;
+            & h2 {
+                font-size: 15px;
+                margin-top: 17px;
+            }
+            & > * {
+                margin: 0 auto;
+                text-align: center;
+                display: block;
+            }
+            & svg {
+                margin: 0 auto;
+            }
+            & .angle {
+                bottom: 14px;
+                left: 0%;
+                transform: translate(70%, 0%);
+                & svg {
+                    rotate: 0deg;
+                }
+            }
+        }
+        & .body {
+            padding: 0 14px;
+            max-height: 0px;
+            transition: all 0.2s ease-in-out;
+            overflow: hidden;
+            & p {
+                font-size: 13px;
+            }
+            & a {
+                font-size: 13px;
+            }
+        }
+    }
+}

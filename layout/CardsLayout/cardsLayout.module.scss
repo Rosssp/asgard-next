@@ -1,0 +1,69 @@
+.developers {
+    // display: flex;
+    // flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 29px;
+    @media (max-width: 768px) {
+        gap: 6px;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+    }
+}
+.stockCard {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 27px;
+    row-gap: 30px;
+}
+.catalog__cards {
+    @media (max-width: 1210px) {
+        margin: 0 -10px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            display: none;
+            // height: 4px;
+        }
+    }
+    // @media (max-width: 960px) {
+    //     &::-webkit-scrollbar {
+    //         display: none;
+    //     }
+    // }
+}
+.catalog {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+}
+.title {
+    & > p {
+        margin-left: 31px;
+        font-weight: 400;
+        & > span {
+            font-weight: 600;
+        }
+    }
+    & > * {
+        vertical-align: middle;
+        display: inline-block;
+    }
+}
+
+.catalog {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 27px;
+    row-gap: 30px;
+    @media (max-width: 1210px) {
+        width: max-content;
+        overflow-x: scroll;
+    }
+    @media (max-width: 940px) {
+        gap: 12px;
+        row-gap: 12px;
+        justify-content: center;
+    }
+}

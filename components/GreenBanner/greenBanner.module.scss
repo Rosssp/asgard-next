@@ -1,0 +1,81 @@
+@use "@/styles/mixins";
+
+.wrapper {
+    @include mixins.green-gradient-x;
+    height: 110px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 615px 225px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 23px 0 63px;
+    &:has(> svg) {
+        padding: 0 23px 0 21px;
+        justify-content: stretch;
+        grid-template-columns: 84px auto max-content;
+    }
+
+    & .title {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        & p {
+            text-transform: none;
+            font-size: 16px;
+        }
+    }
+    & .subtitle,
+    .article {
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+    & .article {
+        cursor: pointer;
+        padding: 15px 30px;
+        text-align: center;
+        border-radius: 4px;
+        border: 2px solid white;
+    }
+}
+
+@media (max-width: 768px) {
+    .wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        text-align: center;
+        padding: 20px;
+        height: max-content;
+        &:has(> svg) {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            & .title {
+                display: flex;
+                flex-direction: column;
+                & h1 {
+                    font-size: 21px;
+                }
+            }
+        }
+        & .title {
+            display: flex;
+            flex-direction: column;
+            & h1 {
+                font-size: 18px;
+            }
+            & p {
+                font-size: 12px;
+            }
+        }
+        & .article {
+            cursor: pointer;
+            padding: 8px 9px;
+            height: auto;
+            display: block;
+            border: 1px solid white;
+        }
+    }
+}

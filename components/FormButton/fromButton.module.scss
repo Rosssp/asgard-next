@@ -1,0 +1,80 @@
+.wrapper {
+    align-self: center;
+    color: var(--tGreen);
+    font-size: 17px;
+    border: none;
+    border-radius: var(--br);
+    padding: 2px 2px;
+    outline: 4px solid rgba(255, 255, 255, 0.5);
+    background-color: rgba(255, 255, 255, 0.5);
+    width: max-content;
+    height: max-content;
+
+    & > * {
+        text-transform: uppercase;
+        font-family: "Gotham Pro" !important;
+        font-weight: bold !important;
+        border-radius: 4px;
+        margin: 0 auto;
+        padding: 16px 20px;
+        background-color: white;
+        @media (max-width: 768px) {
+            padding: 12px 13px;
+        }
+    }
+}
+
+.tOrange {
+    & > * {
+        color: var(--tOrange);
+    }
+}
+
+.bgOrange {
+    & > * {
+        padding: 12px 50px;
+        color: white;
+        background-color: var(--tOrange);
+        font-size: 12px;
+    }
+    outline: 4px solid rgba(255, 136, 0, 0.5);
+    background-color: rgba(255, 136, 0, 0.5);
+}
+
+.bgOrangeVisit {
+    max-width: 271px;
+    & > * {
+        padding: 16px;
+        color: white;
+        background-color: var(--tOrange);
+        font-size: 17px;
+    }
+    outline: 4px solid rgba(255, 136, 0, 0.5);
+    background-color: rgba(255, 136, 0, 0.5);
+    @media (max-width: 768px) {
+        & br {
+            display: none;
+        }
+        width: max-content;
+        max-width: 295px;
+        & > * {
+            font-size: 9px;
+            padding: 10px 13px;
+        }
+    }
+}
+
+.tOrangeVisit {
+    & > * {
+        padding: 16px;
+        font-size: 17px;
+        color: var(--tOrange);
+    }
+    @media (max-width: 768px) {
+        & > * {
+            padding: 14px 32px;
+            font-size: 12px;
+            padding: 10px 13px;
+        }
+    }
+}
